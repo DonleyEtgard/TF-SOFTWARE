@@ -1,0 +1,102 @@
+﻿@model ZONAUTO.Models.Transaccione
+@{
+    ViewData["Title"] = "Transacción";
+    bool confirmado = Model.Confirmado ?? false; 
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-header @(confirmado ? "bg-success" : "bg-primary") text-white">
+            <h4 class="mb-0">
+                @if (confirmado)
+                {
+                    @:Transacción Confirmada #@Model.TransaccionId
+                }
+                else
+                {
+                    @:Confirmar Pago de la Transacción #@Model.TransaccionId
+                }
+            </h4>
+        </div>
+
+        <div class="card-body">
+            <!-- Datos principales -->
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <p><strong>Comprador:</strong> @Model.Comprador?.Usuario?.Persona?.Nombre</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Vendedor:</strong> @Model.Vendedor?.Usuario?.Persona?.Nombre</p>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <p><strong>Publicación:</strong> @Model.Publicacion?.Titulo</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Monto Final:</strong> @Model.MontoFinal?.ToString("C")</p>
+                </div>
+            </div>
+
+            @if (confirmado)
+            {
+                <!-- Información de confirmación -->
+                <div class="alert alert-success">
+                    <i class="bi bi-check-circle"></i> Pago confirmado el
+                    <strong>@Model.Fecha?.ToString("dd/MM/yyyy HH:mm")</strong>.
+                </div>
+
+                <p><strong>Método de Pago:</strong> @ViewBag.MetodoPagoNombre</p>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left"></i> Volver al listado
+                    </a>
+                </div>
+            }
+            else
+            {
+                <!-- Formulario de confirmación -->
+                <form asp-action="ConfirmarPago" method="post" class="mt-4">
+                    <input type="hidden" name="id" value="@Model.TransaccionId" />
+
+                    <div class="mb-3">
+                        <label for="metodoPagoId" class="form-label">Seleccione el Método de Pago</label>
+                        <select id="metodoPagoId" name="metodoPagoId" class="form-select" required>
+                            <option value="">-- Seleccionar --</option>
+                            @foreach (var metodo in (SelectList)ViewBag.MetodosPago)
+                            {
+                                <option value="@metodo.Value">@metodo.Text</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-4">
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Volver
+                        </a>
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-check-circle"></i> Confirmar Pago
+                        </button>
+                    </div>
+                </form>
+            }
+
+            <!-- Alertas de mensaje -->
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger mt-3">
+                    @TempData["Error"]
+                </div>
+            }
+
+            @if (TempData["Mensaje"] != null)
+            {
+                <div class="alert alert-success mt-3">
+                    @TempData["Mensaje"]
+                </div>
+            }
+        </div>
+    </div>
+</div>

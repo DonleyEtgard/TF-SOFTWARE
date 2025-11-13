@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ZONAUTO.Models.Publicacione>
+
+@{
+    ViewData["Title"] = "Listado de Autos";
+}
+
+<h1 class="mb-4 text-primary">Listado de Autos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">
+        <i class="bi bi-plus-circle"></i> Crear Nueva Publicación
+    </a>
+</p>
+
+<table class="table table-bordered table-striped table-hover shadow-sm">
+    <thead class="table-light">
+        <tr>
+            <th>Imagen</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Kilometraje</th>
+            <th>Título</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Publicado por</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ImagenRuta))
+                    {
+                        <img src="@item.ImagenRuta" alt="Imagen Auto" style="max-width:100px; border-radius:8px;" />
+                    }
+                    else
+                    {
+                        <span class="text-muted">Sin imagen</span>
+                    }
+                </td>
+                <td>@item.Auto?.Marca</td>
+                <td>@item.Auto?.Modelo</td>
+                <td>@item.Auto?.Anio</td>
+                <td>@item.Auto?.Kilometro</td>
+                <td>@item.Titulo</td>
+                <td>@item.Descripcion</td>
+                <td>@item.Precio.ToString("C")</td>
+                <td>@item.Usuario?.Persona?.Nombre @item.Usuario?.Persona?.Apellido</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.PublicacionId" class="btn btn-info btn-sm">
+                        <i class="bi bi-eye"></i> Ver
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@item.PublicacionId" class="btn btn-warning btn-sm">
+                        <i class="bi bi-pencil"></i> Editar
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.PublicacionId" class="btn btn-danger btn-sm">
+                        <i class="bi bi-trash"></i> Eliminar
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

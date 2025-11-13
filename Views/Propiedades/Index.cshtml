@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ZONAUTO.Models.Publicacione>
+
+
+<h1 class="mb-4">Listado de Propiedades Publicadas</h1>
+
+<table class="table table-bordered table-striped table-hover align-middle">
+    <thead class="table-dark text-center">
+        <tr>
+            <th>Título</th>
+            <th>Ubicación</th>
+            <th>Tipo</th>
+            <th>Metros²</th>
+            <th>Precio</th>
+            <th>Vendedor</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="text-center align-middle">
+                <td>@item.Titulo</td>
+                <td>@item.Propiedad?.Ubicacion</td>
+                <td>@item.Propiedad?.Tipo</td>
+                <td>@item.Propiedad?.MetroCuadrados</td>
+                <td>@item.Titulo</td>
+                <td>@item.Descripcion</td>
+                <td>@item.Precio.ToString("C")</td>
+                <td>@item.Usuario?.Persona?.Nombre</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.PublicacionId" class="btn btn-info btn-sm me-1">Detalles</a>
+                    <a asp-action="Edit" asp-route-id="@item.PublicacionId" class="btn btn-warning btn-sm me-1">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.PublicacionId" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

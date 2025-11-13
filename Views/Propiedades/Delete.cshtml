@@ -1,0 +1,79 @@
+﻿@model ZONAUTO.Models.Publicacione
+
+@{
+    ViewData["Title"] = "Eliminar Publicación de Propiedad";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4 text-danger text-center">Eliminar Publicación</h1>
+
+    <div class="alert alert-danger text-center fw-bold">
+        ¿Está seguro que desea eliminar esta publicación?
+        <br />
+        <small class="fw-normal">Esta acción no se puede deshacer.</small>
+    </div>
+
+    <div class="card shadow mb-4 border-danger">
+        <div class="card-header bg-danger text-white text-center">
+            <h4 class="mb-0">@Model.Titulo</h4>
+        </div>
+
+        <div class="card-body">
+            <table class="table table-bordered table-hover align-middle">
+                <tbody>
+                    <tr>
+                        <th style="width: 200px;">Ubicación</th>
+                        <td>@Model.Propiedad?.Ubicacion</td>
+                    </tr>
+                    <tr>
+                        <th>Metros Cuadrados</th>
+                        <td>@Model.Propiedad?.MetroCuadrados m²</td>
+                    </tr>
+                    <tr>
+                        <th>Habitaciones</th>
+                        <td>@Model.Propiedad?.Habitaciones</td>
+                    </tr>
+                    <tr>
+                        <th>Tipo</th>
+                        <td>@Model.Propiedad?.Tipo</td>
+                    </tr>
+                    <tr>
+                        <th>Descripción</th>
+                        <td>@Model.Propiedad?.Descripcion</td>
+                    </tr>
+                    <tr>
+                        <th>Categoría</th>
+                        <td>@Model.Categoria?.Tipo</td>
+                    </tr>
+                    <tr>
+                        <th>Precio</th>
+                        <td>@Model.Precio.ToString("C")</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            @if (!string.IsNullOrEmpty(Model.ImagenRuta))
+            {
+                <div class="text-center mt-3">
+                    <img src="@Model.ImagenRuta" alt="Imagen Propiedad" class="img-fluid rounded shadow-sm" style="max-width: 350px;" />
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="text-center mt-3">
+        <form asp-action="Delete" method="post" class="d-inline">
+            <input type="hidden" asp-for="PublicacionId" />
+            <button type="submit" class="btn btn-danger px-4 me-2">
+                <i class="bi bi-trash"></i> Eliminar
+            </button>
+            <a asp-action="Index" class="btn btn-secondary px-4">
+                <i class="bi bi-x-circle"></i> Cancelar
+            </a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

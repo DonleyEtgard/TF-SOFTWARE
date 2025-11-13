@@ -1,0 +1,41 @@
+﻿@model ZONAUTO.Models.Publicacione
+@{
+    ViewData["Title"] = "Detalles de Publicación";
+}
+
+<h1>@Model.Titulo</h1>
+
+<div>
+    <p><strong>Tipo:</strong> @(Model.Auto != null ? "Auto" : "Propiedad")</p>
+    <p><strong>Usuario:</strong> @Model.Usuario.Persona.Nombre</p>
+    <p><strong>Precio:</strong> @Model.Precio.ToString("C")</p>
+    <p><strong>Descripción:</strong> @Model.Descripcion</p>
+    <p><strong>Fecha:</strong> @Model.FechaPublicacion.ToShortDateString()</p>
+    @if (!string.IsNullOrEmpty(Model.ImagenRuta))
+    {
+        <img src="@Model.ImagenRuta" alt="Imagen" class="img-thumbnail" style="max-width:300px;" />
+    }
+</div>
+
+@if (Model.Auto != null)
+{
+    <h3>Detalles del Auto</h3>
+    <p><strong>Marca:</strong> @Model.Auto.Marca</p>
+    <p><strong>Modelo:</strong> @Model.Auto.Modelo</p>
+    <p><strong>Año:</strong> @Model.Auto.Anio</p>
+    <p><strong>Kilometraje:</strong> @Model.Auto.Kilometro</p>
+}
+
+@if (Model.Propiedad != null)
+{
+    <h3>Detalles de la Propiedad</h3>
+    <p><strong>Ubicación:</strong> @Model.Propiedad.Ubicacion</p>
+    <p><strong>Tipo:</strong> @Model.Propiedad.Tipo</p>
+    <p><strong>Metros cuadrados:</strong> @Model.Propiedad.MetroCuadrados</p>
+    <p><strong>Habitaciones:</strong> @Model.Propiedad.Habitaciones</p>
+}
+
+<p>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</p>
+

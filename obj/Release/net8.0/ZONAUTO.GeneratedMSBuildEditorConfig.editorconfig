@@ -1,0 +1,555 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ZONAUTO
+build_property.RootNamespace = ZONAUTO
+build_property.ProjectDir = C:\Users\donle\OneDrive\Desktop\TPIng_Software\ZONAUTO\ZONAUTO\ZONAUTO\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\donle\OneDrive\Desktop\TPIng_Software\ZONAUTO\ZONAUTO\ZONAUTO
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Administradores/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvcmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Administradores/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvcmVzXERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Administradores/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvcmVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Administradores/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvcmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Administradores/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvcmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Administradores/GestionarUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvcmVzXEdlc3Rpb25hclVzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Administradores/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvcmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Autoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Autoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Autoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Autoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Autoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Categorias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Categorias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Categorias/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Categorias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Categorias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Chats/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Chats/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Chats/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Chats/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Chats/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Compradores/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhZG9yZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Compradores/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhZG9yZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Compradores/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhZG9yZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Compradores/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhZG9yZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Compradores/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhZG9yZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Compradores/Publicaciones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhZG9yZXNcUHVibGljYWNpb25lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Compradores/RealizarOfertas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhZG9yZXNcUmVhbGl6YXJPZmVydGFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Direcciones/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyZWNjaW9uZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Direcciones/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyZWNjaW9uZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Direcciones/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyZWNjaW9uZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Direcciones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyZWNjaW9uZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Direcciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyZWNjaW9uZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Favoritoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3JpdG9lc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Favoritoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3JpdG9lc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Favoritoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3JpdG9lc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Favoritoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3JpdG9lc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Favoritoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3JpdG9lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/ImagenesPublicadas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VuZXNQdWJsaWNhZGFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/ImagenesPublicadas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VuZXNQdWJsaWNhZGFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/ImagenesPublicadas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VuZXNQdWJsaWNhZGFzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/ImagenesPublicadas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VuZXNQdWJsaWNhZGFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/ImagenesPublicadas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VuZXNQdWJsaWNhZGFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Mensajes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVuc2FqZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Mensajes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVuc2FqZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Mensajes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVuc2FqZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Mensajes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVuc2FqZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Mensajes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVuc2FqZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/MetodosPagoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0b2Rvc1BhZ29lc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/MetodosPagoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0b2Rvc1BhZ29lc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/MetodosPagoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0b2Rvc1BhZ29lc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/MetodosPagoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0b2Rvc1BhZ29lc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/MetodosPagoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0b2Rvc1BhZ29lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Notificaciones/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2FjaW9uZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Notificaciones/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2FjaW9uZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Notificaciones/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2FjaW9uZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Notificaciones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2FjaW9uZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Notificaciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2FjaW9uZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Ofertas/CancelarOferta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZlcnRhc1xDYW5jZWxhck9mZXJ0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Ofertas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZlcnRhc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Ofertas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZlcnRhc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Ofertas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZlcnRhc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Ofertas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZlcnRhc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Ofertas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZlcnRhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Ofertas/RealizarOferta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZlcnRhc1xSZWFsaXphck9mZXJ0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Pagoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Pagoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Pagoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Pagoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Pagoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Personas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Personas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Personas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Personas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Personas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Propiedades/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGllZGFkZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Propiedades/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGllZGFkZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Propiedades/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGllZGFkZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Propiedades/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGllZGFkZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Propiedades/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGllZGFkZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/PublicacionesPremiums/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNpb25lc1ByZW1pdW1zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/PublicacionesPremiums/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNpb25lc1ByZW1pdW1zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/PublicacionesPremiums/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNpb25lc1ByZW1pdW1zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/PublicacionesPremiums/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNpb25lc1ByZW1pdW1zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/PublicacionesPremiums/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNpb25lc1ByZW1pdW1zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Publicaciones/CrearPublicacionAuto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNpb25lc1xDcmVhclB1YmxpY2FjaW9uQXV0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Publicaciones/CrearPublicacionPropiedad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNpb25lc1xDcmVhclB1YmxpY2FjaW9uUHJvcGllZGFkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Publicaciones/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNpb25lc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Publicaciones/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNpb25lc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Publicaciones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNpb25lc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Publicaciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNpb25lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/TiposUsuarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NVc3Vhcmlvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/TiposUsuarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NVc3Vhcmlvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/TiposUsuarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NVc3Vhcmlvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/TiposUsuarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NVc3Vhcmlvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/TiposUsuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NVc3Vhcmlvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Transacciones/ConfirmarPago.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xDb25maXJtYXJQYWdvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Transacciones/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Transacciones/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Transacciones/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Transacciones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Transacciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/UserLogins/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckxvZ2luc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/UserLogins/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckxvZ2luc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/UserLogins/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckxvZ2luc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/UserLogins/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckxvZ2luc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/UserLogins/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckxvZ2luc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/UserLogins/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckxvZ2luc1xMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Usuarios/CambiarContrasena.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ2FtYmlhckNvbnRyYXNlbmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Usuarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Usuarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Usuarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Usuarios/RegistrarUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcUmVnaXN0cmFyVXN1YXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Vendedores/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3Jlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Vendedores/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3Jlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Vendedores/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3Jlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Vendedores/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3Jlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Vendedores/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3Jlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Ventas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Ventas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Ventas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Ventas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Ventas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/donle/OneDrive/Desktop/TPIng_Software/ZONAUTO/ZONAUTO/ZONAUTO/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-u1w4dmt2eu

@@ -1,0 +1,62 @@
+﻿@model ZONAUTO.Models.Publicacione
+
+@{
+    ViewData["Title"] = "Eliminar Publicación";
+}
+
+<h1 class="text-danger">Eliminar Publicación</h1>
+
+<div class="alert alert-warning mt-3">
+    <h5>¿Está seguro que desea eliminar esta publicación?</h5>
+</div>
+
+<div class="card mt-3 shadow">
+    <div class="card-header bg-danger text-white">
+        <h4>@Model.Titulo</h4>
+    </div>
+
+    <div class="card-body">
+        <table class="table table-bordered">
+            <tr>
+                <th>Marca</th>
+                <td>@Model.Auto?.Marca</td>
+            </tr>
+            <tr>
+                <th>Modelo</th>
+                <td>@Model.Auto?.Modelo</td>
+            </tr>
+            <tr>
+                <th>Año</th>
+                <td>@Model.Auto?.Anio</td>
+            </tr>
+            <tr>
+                <th>Kilometraje</th>
+                <td>@Model.Auto?.Kilometro</td>
+            </tr>
+            <tr>
+                <th>Precio</th>
+                <td>@Model.Precio.ToString("C")</td>
+            </tr>
+            @if (!string.IsNullOrEmpty(Model.ImagenRuta))
+            {
+                <tr>
+                    <th>Imagen</th>
+                    <td>
+                        <img src="@Model.ImagenRuta" alt="Imagen del Auto" style="max-width:200px; border-radius:10px;" />
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post" class="mt-4">
+    <input type="hidden" asp-for="PublicacionId" />
+    <button type="submit" class="btn btn-danger">
+        <i class="bi bi-trash"></i> Eliminar
+    </button>
+    <a asp-action="Index" class="btn btn-secondary ms-2">
+        <i class="bi bi-x-circle"></i> Cancelar
+    </a>
+</form>
+

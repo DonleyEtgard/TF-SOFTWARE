@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ZONAUTO.Models.ImagenesPublicada>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UrlImagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EsPrincipal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaSubida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Publicacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UrlImagen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EsPrincipal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaSubida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publicacion.PublicacionId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ImagenId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ImagenId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ImagenId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

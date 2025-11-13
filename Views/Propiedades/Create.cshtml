@@ -1,0 +1,88 @@
+﻿@model ZONAUTO.Models.PublicacionCreateViewModel
+
+@{
+    ViewData["Title"] = "Crear Publicación de Propiedad";
+}
+
+<div class="publicacion-page">
+    <h1>Crear Publicación de Propiedad</h1>
+
+    <form asp-action="Create" enctype="multipart/form-data" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <!-- DATOS DE LA PROPIEDAD -->
+        <h4>Datos de la Propiedad</h4>
+
+        <div class="form-group mb-3">
+            <label asp-for="Publicacione.Propiedad.Ubicacion"></label>
+            <input asp-for="Publicacione.Propiedad.Ubicacion" class="form-control" />
+            
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Publicacione.Propiedad.MetroCuadrados"></label>
+            <input asp-for="Publicacione.Propiedad.MetroCuadrados" type="number" step="0.01" class="form-control" />
+            
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Publicacione.Propiedad.Habitaciones"></label>
+            <input asp-for="Publicacione.Propiedad.Habitaciones" type="number" class="form-control" />
+            
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Publicacione.Propiedad.Tipo"></label>
+            <input asp-for="Publicacione.Propiedad.Tipo" class="form-control" placeholder="Ej: Casa, Departamento, Local..." />
+          
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Publicacione.Propiedad.Descripcion">Descripción de la Propiedad</label>
+            <textarea asp-for="Publicacione.Propiedad.Descripcion" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Categoría</label>
+            <select asp-for="Publicacione.Propiedad.CategoriaId" class="form-control"
+                    asp-items="@(new SelectList(ViewBag.Categorias, "CategoriaId", "Tipo"))">
+                <option value="">Seleccione una categoría</option>
+            </select>
+            
+        </div>
+
+        <!-- DATOS DE LA PUBLICACIÓN -->
+        <h4>Datos de la Publicación</h4>
+
+        <div class="form-group mb-3">
+            <label asp-for="Publicacione.Titulo"></label>
+            <input asp-for="Publicacione.Titulo" class="form-control" placeholder="Ej: Hermosa casa en zona norte" />
+          
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Publicacione.Descripcion">Descripción de la Publicación</label>
+            <textarea asp-for="Publicacione.Descripcion" class="form-control"></textarea>
+           
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Publicacione.Precio"></label>
+            <input asp-for="Publicacione.Precio" type="number" step="0.01" class="form-control" />
+            
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Imagen</label>
+            <input type="file" name="Imagen" class="form-control" />
+        </div>
+
+        <!-- BOTONES -->
+        <button type="submit" class="btn btn-primary mt-3">Crear</button>
+        <a asp-action="Index" class="btn btn-secondary mt-3">Cancelar</a>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

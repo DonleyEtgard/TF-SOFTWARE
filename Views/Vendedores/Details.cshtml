@@ -1,0 +1,85 @@
+﻿@model ZONAUTO.Models.Publicacione
+
+@{
+    ViewData["Title"] = "Detalles de la Publicación";
+}
+
+<h2>Detalles de la Publicación</h2>
+
+<div class="card">
+    <div class="card-body">
+        <!-- Imagen -->
+        @if (!string.IsNullOrEmpty(Model.ImagenRuta))
+        {
+            <div class="mb-3 text-center">
+                <img src="@Model.ImagenRuta" alt="Imagen de la publicación" class="img-fluid rounded" style="max-height:300px;" />
+            </div>
+        }
+
+        <!-- Datos Generales -->
+        <h4>Datos Generales</h4>
+        <dl class="row">
+            <dt class="col-sm-3">Título</dt>
+            <dd class="col-sm-9">@Model.Titulo</dd>
+
+            <dt class="col-sm-3">Precio</dt>
+            <dd class="col-sm-9">@Model.Precio.ToString("C")</dd>
+
+            <dt class="col-sm-3">Descripción</dt>
+            <dd class="col-sm-9">@Model.Descripcion</dd>
+
+            <dt class="col-sm-3">Fecha de Publicación</dt>
+            <dd class="col-sm-9">@Model.FechaPublicacion.ToString("dd/MM/yyyy")</dd>
+
+            <dt class="col-sm-3">Categoría</dt>
+            <dd class="col-sm-9">@Model.Categoria?.Tipo</dd>
+        </dl>
+
+        <!-- Datos del Vendedor -->
+        <h4>Vendedor</h4>
+        <dl class="row">
+            <dt class="col-sm-3">Nombre</dt>
+            <dd class="col-sm-9">@Model.Usuario?.Persona?.Nombre @Model.Usuario?.Persona?.Apellido</dd>
+        </dl>
+
+        <!-- Datos específicos -->
+        @if (Model.AutoId != null && Model.Auto != null)
+        {
+            <h4>Datos del Auto</h4>
+            <dl class="row">
+                <dt class="col-sm-3">Marca</dt>
+                <dd class="col-sm-9">@Model.Auto.Marca</dd>
+
+                <dt class="col-sm-3">Modelo</dt>
+                <dd class="col-sm-9">@Model.Auto.Modelo</dd>
+
+                <dt class="col-sm-3">Año</dt>
+                <dd class="col-sm-9">@Model.Auto.Anio</dd>
+
+                <dt class="col-sm-3">Kilometraje</dt>
+                <dd class="col-sm-9">@Model.Auto.Kilometro</dd>
+            </dl>
+        }
+        else if (Model.PropiedadId != null && Model.Propiedad != null)
+        {
+            <h4>Datos de la Propiedad</h4>
+            <dl class="row">
+                <dt class="col-sm-3">Ubicación</dt>
+                <dd class="col-sm-9">@Model.Propiedad.Ubicacion</dd>
+
+                <dt class="col-sm-3">Metros Cuadrados</dt>
+                <dd class="col-sm-9">@Model.Propiedad.MetroCuadrados</dd>
+
+                <dt class="col-sm-3">Habitaciones</dt>
+                <dd class="col-sm-9">@Model.Propiedad.Habitaciones</dd>
+
+                <dt class="col-sm-3">Tipo</dt>
+                <dd class="col-sm-9">@Model.Propiedad.Tipo</dd>
+            </dl>
+        }
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-controller="Publicaciones" asp-action="Details" asp-route-id="@Model.PublicacionId" class="btn btn-sm btn-info me-1 mb-1">ℹ️ Detalles</a>
+</div>

@@ -1,0 +1,179 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ZONAUTO - Compra y venta de autos, ofertas y publicaciones en línea." />
+    <title>@ViewData["Title"] - ZONAUTO</title>
+
+    <link rel="icon" type="image/png" href="~/favicon.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+<body>
+    @{
+        // Obtenemos el tipo y nombre del usuario desde la sesión
+        var tipoUsuario = HttpContextAccessor.HttpContext?.Session.GetString("TipoUsuario") ?? "Invitado";
+        var nombreUsuario = HttpContextAccessor.HttpContext?.Session.GetString("Persona.Nombre") ?? "Usuario";
+    }
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <span class="logo-zon">ZON</span><span class="logo-auto">AUTO</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <!-- 🧭 Menú principal -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Autoes" asp-action="Index">Autos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Propiedades" asp-action="Index">Propiedades</a>
+                        </li>
+
+                        @if (tipoUsuario == "Invitado")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Usuarios" asp-action="RegistrarUsuario">Registrar</a>
+                            </li>
+                        }
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Contactos">Info</a>
+                        </li>
+                    </ul>
+
+                    <!-- 🔍 Buscador -->
+                    <form class="d-flex me-3" asp-controller="Home" asp-action="BuscarPublicacionesAvanzado" method="get">
+                        <input class="form-control me-2" type="search" name="query" placeholder="Buscar publicaciones..." aria-label="Buscar" />
+                        <button class="btn btn-outline-light" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+
+                    <!-- 👤 Menú de usuario -->
+                    <ul class="navbar-nav ms-3">
+                        @if (tipoUsuario == "Invitado")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="UserLogins" asp-action="Login">Iniciar Sesión</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Hola, @nombreUsuario
+                                    <span class="badge bg-info text-dark ms-1">@tipoUsuario</span>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+                                    @switch (tipoUsuario)
+                                    {
+                                        case "Administrador":
+                                            <li><a class="dropdown-item" asp-controller="Administradores" asp-action="Dashboard">Panel de Control</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Administradores" asp-action="GestionarUsuario">Gestionar Usuarios</a></li>
+                                            <li><hr class="dropdown-divider" /></li>
+                                            <li><a class="dropdown-item" asp-controller="Publicaciones" asp-action="Index">Mis Publicaciones</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Publicaciones" asp-action="CrearPublicacionAuto">Crear Publicación de Auto</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Publicaciones" asp-action="CrearPublicacionPropiedad">Crear Publicación de Propiedad</a></li>
+                                            break;
+
+                                        case "Vendedor":
+                                            <li><a class="dropdown-item" asp-controller="Publicaciones" asp-action="Index">Mis Publicaciones</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Autoes" asp-action="Create">Crear Auto</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Propiedades" asp-action="Create">Crear Propiedad</a></li>
+                                            <li><hr class="dropdown-divider" /></li>
+                                            <li><a class="dropdown-item" asp-controller="Mensajes" asp-action="EnviarMensajes">Mis Mensajes</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Facturas" asp-action="EmitirFacturas">Facturas</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Ventas" asp-action="Index">Mis Ventas</a></li>
+                                            <li><a class="dropdown-item" asp-controller="PublicacionesPremiums" asp-action="Suscripciones">Suscripciones</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Chats" asp-action="InicializarChats">Chat</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Ofertas" asp-action="MisOfertas">Mis Ofertas</a></li>
+                                            break;
+
+                                        case "Comprador":
+                                            <li><a class="dropdown-item" asp-controller="Autoes" asp-action="Index">Ver Autos</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Autoes" asp-action="Details">Detalles del Auto</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Ofertas" asp-action="RealizarOferta">Realizar Oferta</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Ofertas" asp-action="CancelarOferta">Cancelar Oferta</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Favoritoes" asp-action="VerFavoritoes">Mis Favoritos</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Transacciones" asp-action="ConfirmarPago">Transacciones</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Chats" asp-action="InicializarChats">Chat</a></li>
+                                            break;
+                                    }
+
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li>
+                                        <form asp-controller="UserLogins" asp-action="Logout" method="post" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="dropdown-item text-danger">Cerrar Sesión</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 🧱 Contenido principal -->
+    <main class="container mt-4">
+        @RenderBody()
+    </main>
+
+    <!-- ⚙️ Footer -->
+    <footer class="bg-dark text-light mt-4 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h6>Contacto</h6>
+                    <p><i class="bi bi-envelope me-2"></i> soporte@zonaauto.com</p>
+                    <p><i class="bi bi-telephone me-2"></i> +54 34100000000</p>
+                    <p><i class="bi bi-geo-alt me-2"></i> Rosario, Santa Fe</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Síguenos</h6>
+                    <p><i class="bi bi-facebook me-2"></i> Facebook</p>
+                    <p><i class="bi bi-instagram me-2"></i> Instagram</p>
+                    <p><i class="bi bi-twitter me-2"></i> Twitter</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Enlaces</h6>
+                    <p>Términos y Condiciones</p>
+                    <p>Política de Privacidad</p>
+                </div>
+            </div>
+            <div class="text-center mt-3 small">
+                <p class="mb-1">ZONAUTO - Compra y venta de autos, tu plataforma de confianza.</p>
+                <span>&copy; 2025 - <strong>Desarrollado por Donley Etgard Merlien</strong></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 📜 Scripts -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="~/js/site.js" asp-append-version="true" defer></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

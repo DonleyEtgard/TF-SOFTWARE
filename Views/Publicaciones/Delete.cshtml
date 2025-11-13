@@ -1,0 +1,20 @@
+﻿@model ZONAUTO.Models.Publicacione
+@{
+    ViewData["Title"] = "Eliminar Publicación";
+}
+
+<h1>Eliminar Publicación</h1>
+
+<h3>¿Está seguro que desea eliminar la publicación "@Model.Titulo"?</h3>
+
+<div>
+    <p><strong>Tipo:</strong> @(Model.Auto != null ? "Auto" : "Propiedad")</p>
+    <p><strong>Usuario:</strong> @Model.Usuario.Persona.Nombre</p>
+    <p><strong>Precio:</strong> @Model.Precio.ToString("C")</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="PublicacionId" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

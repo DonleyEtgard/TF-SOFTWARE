@@ -1,0 +1,83 @@
+﻿@model ZONAUTO.Models.Publicacione
+@{
+    ViewData["Title"] = "Editar Publicación";
+}
+
+<h1>Editar Publicación</h1>
+
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="PublicacionId" />
+
+    <div class="form-group">
+        <label asp-for="Titulo"></label>
+        <input asp-for="Titulo" class="form-control" readonly />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descripcion"></label>
+        <textarea asp-for="Descripcion" class="form-control"></textarea>
+        <span asp-validation-for="Descripcion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Precio"></label>
+        <input asp-for="Precio" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="Precio" class="text-danger"></span>
+    </div>
+
+    @if (Model.Auto != null)
+    {
+        <h3>Datos del Auto</h3>
+        <div class="form-group">
+            <label>Marca</label>
+            <input name="Auto.Marca" value="@Model.Auto.Marca" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Modelo</label>
+            <input name="Auto.Modelo" value="@Model.Auto.Modelo" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Año</label>
+            <input name="Auto.Anio" value="@Model.Auto.Anio" type="number" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Kilometraje</label>
+            <input name="Auto.Kilometro" value="@Model.Auto.Kilometro" type="number" class="form-control" />
+        </div>
+    }
+
+    @if (Model.Propiedad != null)
+    {
+        <h3>Datos de la Propiedad</h3>
+        <div class="form-group">
+            <label>Ubicación</label>
+            <input name="Propiedad.Ubicacion" value="@Model.Propiedad.Ubicacion" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Tipo</label>
+            <input name="Propiedad.Tipo" value="@Model.Propiedad.Tipo" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Metros cuadrados</label>
+            <input name="Propiedad.MetroCuadrados" value="@Model.Propiedad.MetroCuadrados" type="number" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Habitaciones</label>
+            <input name="Propiedad.Habitaciones" value="@Model.Propiedad.Habitaciones" type="number" class="form-control" />
+        </div>
+    }
+
+    <div class="form-group">
+        <label>Imagen (opcional)</label>
+        <input type="file" name="Imagen" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

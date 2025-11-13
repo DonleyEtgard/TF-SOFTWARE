@@ -1,0 +1,78 @@
+﻿@model ZONAUTO.Models.Publicacione
+
+@{
+    ViewData["Title"] = "Detalles de la Publicación";
+}
+
+<h1 class="mb-4 text-primary">@Model.Titulo</h1>
+
+<h4 class="mt-3">Datos del Auto</h4>
+<table class="table table-bordered">
+    <tr>
+        <th>Marca</th>
+        <td>@Model.Auto?.Marca</td>
+    </tr>
+    <tr>
+        <th>Modelo</th>
+        <td>@Model.Auto?.Modelo</td>
+    </tr>
+    <tr>
+        <th>Año</th>
+        <td>@Model.Auto?.Anio</td>
+    </tr>
+    <tr>
+        <th>Kilometraje</th>
+        <td>@Model.Auto?.Kilometro?.ToString("N0") km</td>
+    </tr>
+    <tr>
+        <th>Descripción del Auto</th>
+        <td>@Model.Auto?.Descripcion</td>
+    </tr>
+    <tr>
+        <th>Categoría</th>
+        <td>@Model.Categoria?.Tipo</td>
+    </tr>
+    <tr>
+        <th>Publicado por</th>
+        <td>@Model.Usuario?.Persona?.Nombre @Model.Usuario?.Persona?.Apellido</td>
+    </tr>
+</table>
+
+<h4 class="mt-4">Datos de la Publicación</h4>
+<table class="table table-bordered">
+    <tr>
+        <th>Descripción</th>
+        <td>@Model.Descripcion</td>
+    </tr>
+    <tr>
+        <th>Precio</th>
+        <td>@Model.Precio.ToString("C")</td>
+    </tr>
+    <tr>
+        <th>Fecha de Publicación</th>
+        <td>@Model.FechaPublicacion.ToShortDateString()</td>
+    </tr>
+    <tr>
+        <th>Imagen</th>
+        <td>
+            @if (!string.IsNullOrEmpty(Model.ImagenRuta))
+            {
+                <img src="@Model.ImagenRuta" alt="Imagen del Auto" style="max-width:250px; border-radius:10px; border:1px solid #ddd;" />
+            }
+            else
+            {
+                <span class="text-muted">Sin imagen disponible</span>
+            }
+        </td>
+    </tr>
+</table>
+
+<div class="mt-4">
+    <a asp-action="Edit" asp-route-id="@Model.PublicacionId" class="btn btn-warning">
+        <i class="bi bi-pencil-square"></i> Editar
+    </a>
+    <a asp-action="Index" class="btn btn-secondary ms-2">
+        <i class="bi bi-arrow-left-circle"></i> Volver
+    </a>
+</div>
+

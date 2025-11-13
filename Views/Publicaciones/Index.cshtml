@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ZONAUTO.Models.Publicacione>
+@{
+    ViewData["Title"] = "Publicaciones";
+}
+
+<h1>Publicaciones</h1>
+
+<p>
+    <a asp-action="CrearPublicacionAuto" class="btn btn-primary">Nueva Publicación de Auto</a>
+    <a asp-action="CrearPublicacionPropiedad" class="btn btn-primary">Nueva Publicación de Propiedad</a>
+</p>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Tipo</th>
+            <th>Usuario</th>
+            <th>Precio</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Titulo</td>
+                <td>@(p.Auto != null ? "Auto" : "Propiedad")</td>
+                <td>@p.Usuario.Persona.Nombre</td>
+                <td>@p.Precio.ToString("C")</td>
+                <td>@p.FechaPublicacion.ToShortDateString()</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@p.PublicacionId" class="btn btn-info btn-sm">Detalles</a>
+                    <a asp-action="Edit" asp-route-id="@p.PublicacionId" class="btn btn-warning btn-sm">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@p.PublicacionId" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

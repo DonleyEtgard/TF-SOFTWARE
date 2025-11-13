@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    var ultimosUsuarios = ViewBag.UltimosUsuarios as IEnumerable<ZONAUTO.Models.Usuario>;
+    var ultimasOfertas = ViewBag.UltimasOfertas as IEnumerable<ZONAUTO.Models.Oferta>;
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">📊 Panel de Administración</h1>
+
+    <!-- Tarjetas de resumen -->
+    <div class="row text-center">
+        <div class="col-md-3 mb-3">
+            <div class="card shadow-sm border-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Usuarios</h5>
+                    <h2 class="text-primary">@ViewBag.TotalUsuarios</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card shadow-sm border-success">
+                <div class="card-body">
+                    <h5 class="card-title">Administradores</h5>
+                    <h2 class="text-success">@ViewBag.TotalAdministradores</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card shadow-sm border-warning">
+                <div class="card-body">
+                    <h5 class="card-title">Publicaciones</h5>
+                    <h2 class="text-warning">@ViewBag.TotalPublicaciones</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card shadow-sm border-info">
+                <div class="card-body">
+                    <h5 class="card-title">Ofertas</h5>
+                    <h2 class="text-info">@ViewBag.TotalOfertas</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Últimos Usuarios -->
+    <div class="card my-4 shadow-sm">
+        <div class="card-header">
+            👥 Últimos Usuarios Registrados
+        </div>
+        <div class="card-body">
+            @if (ultimosUsuarios != null && ultimosUsuarios.Any())
+            {
+                <table class="table table-sm table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Fecha Registro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var u in ultimosUsuarios)
+                        {
+                            <tr>
+                                <td>@u.Persona?.Nombre @u.Persona?.Apellido</td>
+                                <td>@(u.Persona?.Email ?? "Sin Email")</td>
+                                <td>@u.FechaRegistro.ToString("dd/MM/yyyy")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>No hay usuarios recientes.</p>
+            }
+        </div>
+    </div>
+
+    <!-- Últimas Ofertas -->
+    <div class="card my-4 shadow-sm">
+        <div class="card-header">
+            🏷 Últimas Ofertas
+        </div>
+        <div class="card-body">
+            @if (ultimasOfertas != null && ultimasOfertas.Any())
+            {
+                <table class="table table-sm table-striped">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Precio</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var o in ultimasOfertas)
+                        {
+                            <tr>
+                                <td>@(o.Publicacion?.Titulo ?? "Sin título")</td>
+                                <td>@(o.Publicacion != null ? o.Publicacion.Precio.ToString("C") : "0")</td>
+                                <td>@(o.FechaOferta?.ToString("dd/MM/yyyy") ?? "-")</td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            }
+            else
+            {
+                <p>No hay ofertas recientes.</p>
+            }
+        </div>
+    </div>
+</div>
