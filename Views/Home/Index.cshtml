@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "ZonaAuto - Autos y Propiedades Premium";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (ViewBag.MensajeBienvenida != null)
+{
+    <div class="alert alert-success">
+        @ViewBag.MensajeBienvenida
+        <br />Rol: @ViewBag.TipoUsuario
+    </div>
+}
+
+<div class="container-fluid p-0">
+
+    <!-- Banner -->
+    <div class="position-relative text-center text-white" style="height: 400px; overflow: hidden;">
+        <img src="https://cdn.dribbble.com/users/515394/screenshots/5084521/car_loop_4x3.gif"
+             alt="Autos y Propiedades"
+             class="w-100 h-100 object-fit-cover" style="filter: brightness(0.6);" />
+        <div class="position-absolute top-50 start-50 translate-middle text-center">
+            <h1 class="display-3 fw-bold fade-in">Bienvenido a ZonAuto</h1>
+            <p class="lead fade-in">Tu portal para comprar y vender autos y propiedades</p>
+            <a asp-controller="Userlogins" asp-action="Login" class="btn btn-light btn-lg">Publicar ahora</a>
+        </div>
+    </div>
+
+    <!-- Autos Destacados -->
+    <section class="container my-5">
+        <h2 class="mb-4 text-center">Autos Destacados</h2>
+        <div class="row g-4 justify-content-center">
+            @if (ViewBag.Autos != null && ((List<string>)ViewBag.Autos).Any())
+            {
+                int autoIndex = 0;
+                foreach (var auto in (List<string>)ViewBag.Autos)
+                {
+                    <div class="col-md-4">
+                        <div class="card shadow-lg border-0 card-hover">
+                            <img src="@auto" class="card-img-top" alt="Auto destacado @autoIndex" />
+                            <div class="card-img-overlay d-flex flex-column justify-content-end p-3 bg-dark bg-opacity-25 rounded">
+                                <h5 class="card-title">Auto en Venta</h5>
+                                <p class="card-text">Excelente estado, consulte precio.</p>
+                                <a asp-controller="Compradores"
+                                   asp-action="RealizarOfertas"
+                                   asp-route-id="@autoIndex"
+                                   class="btn btn-sm btn-primary">Oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                    autoIndex++;
+                }
+            }
+            else
+            {
+                <p class="text-center">No hay autos cargados aún.</p>
+            }
+        </div>
+    </section>
+
+    <!-- Carrusel de Propiedades -->
+    <section class="container my-5">
+        <h2 class="mb-4 text-center">Propiedades Exclusivas</h2>
+        <div id="propiedadesCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+            <div class="carousel-inner rounded-3">
+                @if (ViewBag.Propiedades != null && ((List<string>)ViewBag.Propiedades).Any())
+                {
+                    int index = 0;
+                    foreach (var propiedad in (List<string>)ViewBag.Propiedades)
+                    {
+                        <div class="carousel-item @(index == 0 ? "active" : "")">
+                            <img src="@propiedad" class="d-block w-100" alt="Propiedad destacada @index"
+                                 style="height: 400px; object-fit: cover;" />
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                <h5>Propiedad destacada</h5>
+                                <p>Amplia y cómoda, consulte precio.</p>
+                                <a asp-controller="Compradores"
+                                   asp-action="RealizarOfertas"
+                                   asp-route-id="@index"
+                                   class="btn btn-sm btn-primary">Oferta</a>
+                            </div>
+                        </div>
+                        index++;
+                    }
+                }
+                else
+                {
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center align-items-center" style="height:400px; background:#ddd;">
+                            <h4>No hay propiedades cargadas aún</h4>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#propiedadesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#propiedadesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Llamada a la acción -->
+    <section class="bg-primary text-white py-5 text-center">
+        <div class="container">
+            <h3 class="mb-3">¿Quieres vender tu auto o propiedad?</h3>
+            <p class="mb-4">Únete a ZonaAuto y llega a miles de compradores potenciales.</p>
+
+            @if (User.Identity?.IsAuthenticated ?? false)
+            {
+                <a asp-controller="Vendedores" asp-action="CrearPublicacion" class="btn btn-light btn-lg">Publicar ahora</a>
+            }
+            else
+            {
+                <a asp-controller="UserLogins" asp-action="Login" class="btn btn-light btn-lg">Inicia sesión para publicar</a>
+            }
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    <script>
+        // JS personalizado si se requiere
+    </script>
+}

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ZONAUTO.Models.UserLogin>
+@{
+    ViewData["Title"] = "Historial de Logins";
+}
+
+<h2>@ViewData["Title"]</h2>
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo Login</a>
+</p>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>Email</th>
+            <th>Fecha Login</th>
+            <th>IP</th>
+            <th>Fue Exitoso</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var login in Model)
+        {
+            <tr>
+                <td>@login.LoginId</td>
+                <td>@login.Usuario?.Persona?.Nombre</td>
+                <td>@login.Usuario?.Persona?.Email</td>
+                <td>@login.FechaLogin.ToString("g")</td>
+                <td>@login.DireccionIp</td>
+                <td>
+                    <span class="badge @(login.FueExitoso ? "bg-success" : "bg-danger")">
+                        @(login.FueExitoso ? "Sí" : "No")
+                    </span>
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@login.LoginId" class="btn btn-info btn-sm">Detalles</a>
+                    <a asp-action="Edit" asp-route-id="@login.LoginId" class="btn btn-warning btn-sm">Editar</a>
+                    <form asp-action="Delete" asp-route-id="@login.LoginId" method="post" class="d-inline" onsubmit="return confirm('¿Eliminar este login?');">
+                        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

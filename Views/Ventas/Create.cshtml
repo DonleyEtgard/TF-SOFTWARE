@@ -1,0 +1,58 @@
+﻿@model ZONAUTO.Models.Venta
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Venta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OfertaId" class="control-label"></label>
+                <select asp-for="OfertaId" class ="form-control" asp-items="ViewBag.OfertaId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendedorId" class="control-label"></label>
+                <select asp-for="VendedorId" class ="form-control" asp-items="ViewBag.VendedorId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompradorId" class="control-label"></label>
+                <select asp-for="CompradorId" class ="form-control" asp-items="ViewBag.CompradorId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PublicacionId" class="control-label"></label>
+                <select asp-for="PublicacionId" class ="form-control" asp-items="ViewBag.PublicacionId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransaccionId" class="control-label"></label>
+                <select asp-for="TransaccionId" class ="form-control" asp-items="ViewBag.TransaccionId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioFinal" class="control-label"></label>
+                <input asp-for="PrecioFinal" class="form-control" />
+                <span asp-validation-for="PrecioFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoVenta" class="control-label"></label>
+                <input asp-for="EstadoVenta" class="form-control" />
+                <span asp-validation-for="EstadoVenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

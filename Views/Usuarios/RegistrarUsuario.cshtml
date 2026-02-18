@@ -1,0 +1,115 @@
+﻿@{
+    ViewData["Title"] = "Registrar Usuario";
+    var tiposUsuarios = (SelectList)ViewData["TipoUsuarioId"];
+    var usuarioNombre = TempData["UsuarioNombre"] as string; // Captura el nombre
+}
+
+@if (!string.IsNullOrEmpty(usuarioNombre))
+{
+    <div class="alert alert-success">
+        Bienvenido @usuarioNombre, tu registro fue exitoso.
+    </div>
+}
+
+    <form asp-action="RegistrarUsuario" method="post" class="mt-4">
+        <div class="row">
+            <!-- Datos Personales -->
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <label for="nombre">Nombre</label>
+                    <input name="nombre" class="form-control" value="@(ViewData["nombre"] ?? "")" required />
+                    <span class="text-danger">@Html.ValidationMessage("nombre")</span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="apellido">Apellido</label>
+                    <input name="apellido" class="form-control" value="@(ViewData["apellido"] ?? "")" required />
+                    <span class="text-danger">@Html.ValidationMessage("apellido")</span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="email">Email</label>
+                    <input name="email" type="email" class="form-control" value="@(ViewData["email"] ?? "")" required />
+                    <span class="text-danger">@Html.ValidationMessage("email")</span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                    <input name="fechaNacimiento" type="date" class="form-control" value="@(ViewData["fechaNacimiento"] ?? "")" />
+                    <span class="text-danger">@Html.ValidationMessage("fechaNacimiento")</span>
+                </div>
+            </div>
+
+            <!-- Dirección -->
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <label for="direccion">Calle</label>
+                    <input name="direccion" class="form-control" value="@(ViewData["direccion"] ?? "")" required />
+                    <span class="text-danger">@Html.ValidationMessage("direccion")</span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="ciudad">Ciudad</label>
+                    <input name="ciudad" class="form-control" value="@(ViewData["ciudad"] ?? "")" required />
+                    <span class="text-danger">@Html.ValidationMessage("ciudad")</span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="provincia">Provincia</label>
+                    <input name="provincia" class="form-control" value="@(ViewData["provincia"] ?? "")" required />
+                    <span class="text-danger">@Html.ValidationMessage("provincia")</span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="codigoPostal">Código Postal</label>
+                    <input name="codigoPostal" class="form-control" value="@(ViewData["codigoPostal"] ?? "")" required />
+                    <span class="text-danger">@Html.ValidationMessage("codigoPostal")</span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="pais">País</label>
+                    <input name="pais" class="form-control" value="@(ViewData["pais"] ?? "")" required />
+                    <span class="text-danger">@Html.ValidationMessage("pais")</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Datos de Usuario -->
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <label for="contrasena">Contraseña</label>
+                    <input name="contrasena" type="password" class="form-control" required />
+                    <span class="text-danger">@Html.ValidationMessage("contrasena")</span>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="confirmarContrasena">Confirmar Contraseña</label>
+                    <input name="confirmarContrasena" type="password" class="form-control" required />
+                    <span class="text-danger">@Html.ValidationMessage("confirmarContrasena")</span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <label for="tipoUsuarioId">Tipo de Usuario</label>
+                    <select name="tipoUsuarioId" class="form-control" asp-items="tiposUsuarios" required>
+                        <option value="">Seleccione tipo</option>
+                    </select>
+                    <span class="text-danger">@Html.ValidationMessage("tipoUsuarioId")</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mt-4">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            <a asp-action="Login" class="btn btn-secondary ms-2">Iniciar Sesión</a>
+        </div>
+    </form>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger mt-3">
+            @Html.ValidationSummary()
+        </div>
+    }
+</div>

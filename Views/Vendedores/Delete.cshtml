@@ -1,0 +1,47 @@
+﻿@model ZONAUTO.Models.Publicacione
+
+@{
+    ViewData["Title"] = "Eliminar Publicación";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="card mb-4" style="max-width: 900px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            @if (!string.IsNullOrEmpty(Model.ImagenRuta))
+            {
+                <img src="@Model.ImagenRuta" class="img-fluid rounded-start" alt="Imagen de la publicación" />
+            }
+            else
+            {
+                <div class="d-flex align-items-center justify-content-center bg-light" style="height:100%; min-height:200px;">
+                    <span class="text-muted">Sin imagen</span>
+                </div>
+            }
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Titulo</h5>
+                <p class="card-text"><strong>Descripción:</strong> @Model.Descripcion</p>
+                <p class="card-text"><strong>Precio:</strong> @Model.Precio.ToString("C")</p>
+                <p class="card-text">
+                    <strong>Auto:</strong> @Model.Auto?.Marca @Model.Auto?.Modelo (@Model.Auto?.Anio ?? 0) - @Model.Auto?.Kilometro km
+                </p>
+                <p class="card-text">
+                    <strong>Propiedad:</strong> @Model.Propiedad?.Ubicacion - @Model.Propiedad?.MetroCuadrados m² - @Model.Propiedad?.Habitaciones hab - @Model.Propiedad?.Tipo
+                </p>
+                <p class="card-text"><strong>Categoría:</strong> @Model.Categoria?.Nombre</p>
+                <p class="card-text"><small class="text-muted">Publicado el: @Model.FechaPublicacion.ToString("dd/MM/yyyy HH:mm")</small></p>
+
+                <div class="mt-3">
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" asp-for="PublicacionId" />
+                        <button type="submit" class="btn btn-danger me-2">🗑️ Confirmar Eliminación</button>
+                        <a asp-action="Index" class="btn btn-secondary">🔙 Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

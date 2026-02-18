@@ -1,0 +1,130 @@
+﻿@model ZONAUTO.Models.Publicacione
+
+@{
+    ViewData["Title"] = "Nueva Publicación";
+}
+
+<h2 class="text-center text-primary fw-bold mb-4">
+    <i class="bi bi-plus-circle me-2"></i> Crear Nueva Publicación
+</h2>
+
+<div class="row justify-content-center">
+    <div class="col-lg-7 col-md-9 col-sm-12">
+        <div class="card shadow-lg border-0 rounded-3">
+            <div class="card-body p-4">
+
+                <form asp-action="CrearPublicacion" enctype="multipart/form-data" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <!-- Vendedor -->
+                    <div class="mb-3">
+                        <label asp-for="UsuarioId" class="form-label fw-semibold"></label>
+                        <select asp-for="UsuarioId" class="form-select shadow-sm" asp-items="ViewBag.VendedorId"></select>
+                        <span asp-validation-for="UsuarioId" class="text-danger"></span>
+                    </div>
+
+                    <!-- Selección Auto o Propiedad -->
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label asp-for="AutoId" class="form-label fw-semibold"></label>
+                            <select asp-for="AutoId" class="form-select shadow-sm" asp-items="ViewBag.AutoId">
+                                <option value="">-- Ninguno --</option>
+                            </select>
+                            <span asp-validation-for="AutoId" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label asp-for="PropiedadId" class="form-label fw-semibold"></label>
+                            <select asp-for="PropiedadId" class="form-select shadow-sm" asp-items="ViewBag.PropiedadId">
+                                <option value="">-- Ninguno --</option>
+                            </select>
+                            <span asp-validation-for="PropiedadId" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <!-- Título -->
+                    <div class="mb-3">
+                        <label asp-for="Titulo" class="form-label fw-semibold"></label>
+                        <input asp-for="Titulo" class="form-control shadow-sm" placeholder="Ej: Toyota Corolla 2022" />
+                        <span asp-validation-for="Titulo" class="text-danger"></span>
+                    </div>
+
+                    <!-- Descripción -->
+                    <div class="mb-3">
+                        <label asp-for="Descripcion" class="form-label fw-semibold"></label>
+                        <textarea asp-for="Descripcion" class="form-control shadow-sm" rows="3" placeholder="Describe tu vehículo o propiedad..."></textarea>
+                        <span asp-validation-for="Descripcion" class="text-danger"></span>
+                    </div>
+
+                    <!-- Precio -->
+                    <div class="mb-3">
+                        <label asp-for="Precio" class="form-label fw-semibold"></label>
+                        <div class="input-group shadow-sm">
+                            <span class="input-group-text bg-light"><i class="bi bi-currency-dollar"></i></span>
+                            <input asp-for="Precio" class="form-control" placeholder="Ej: 15000" />
+                        </div>
+                        <span asp-validation-for="Precio" class="text-danger"></span>
+                    </div>
+
+                    <!-- Categoría -->
+                    <div class="mb-3">
+                        <label asp-for="CategoriaId" class="form-label fw-semibold"></label>
+                        <select asp-for="CategoriaId" class="form-select shadow-sm" asp-items="ViewBag.CategoriaId"></select>
+                        <span asp-validation-for="CategoriaId" class="text-danger"></span>
+                    </div>
+
+                    <!-- Imágenes múltiples con vista previa -->
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">Imágenes de la publicación</label>
+                        <input type="file" name="imagenes" id="imagenes" class="form-control shadow-sm" accept="image/*" multiple />
+                        <div class="form-text text-muted mb-2">Puedes subir varias imágenes (JPG, PNG, GIF)</div>
+
+                        <div id="preview" class="d-flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="d-flex justify-content-between mt-4">
+                        <a asp-action="Index" class="btn btn-outline-secondary shadow-sm">
+                            <i class="bi bi-arrow-left"></i> Volver
+                        </a>
+                        <button type="submit" class="btn btn-success shadow-sm px-4">
+                            <i class="bi bi-check-circle"></i> Publicar
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // Previsualización de imágenes
+        const inputImagenes = document.getElementById("imagenes");
+        const preview = document.getElementById("preview");
+
+        inputImagenes.addEventListener("change", function () {
+            preview.innerHTML = ""; // Limpia previsualización
+            for (let file of this.files) {
+                if (!file.type.startsWith("image/")) continue;
+
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const img = document.createElement("img");
+                    img.src = e.target.result;
+                    img.className = "rounded border shadow-sm";
+                    img.style.width = "100px";
+                    img.style.height = "100px";
+                    img.style.objectFit = "cover";
+                    preview.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+}
+

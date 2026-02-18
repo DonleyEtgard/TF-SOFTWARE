@@ -1,0 +1,181 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ZONAUTO - Compra y venta de autos, ofertas y publicaciones en línea." />
+    <title>@ViewData["Title"] - ZONAUTO</title>
+
+    <link rel="icon" type="image/png" href="~/favicon.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <span class="logo-zon">ZON</span><span class="logo-auto">AUTO</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Vendedores" asp-action="Details">Publicaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Usuarios" asp-action="RegistrarUsuario">Registrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Contactos">Info</a>
+                        </li>
+                    </ul>
+
+                    <!-- Buscador -->
+                    <form class="d-flex" asp-controller="Home" asp-action="BuscarPublicacionesAvanzado" method="get">
+                        <input class="form-control me-2" type="search" name="query" placeholder="Buscar publicaciones..." aria-label="Buscar">
+                        <button class="btn btn-outline-light" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+
+                    <!-- Menú de Usuario -->
+                    <ul class="navbar-nav ms-3">
+                        @{
+                            var tipoUsuario = HttpContextAccessor.HttpContext?.Session.GetString("TipoUsuario") ?? "Invitado";
+                            var nombreUsuario = HttpContextAccessor.HttpContext?.Session.GetString("Nombre") ?? "Usuario";
+                        }
+
+                        @if (tipoUsuario == "Invitado")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="UserLogins" asp-action="Login">Iniciar Sesión</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Hola, @nombreUsuario
+                                    <span class="badge bg-info text-dark ms-1">@tipoUsuario</span>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+                                    @switch (tipoUsuario)
+                                    {
+                                        case "Administrador":
+                                            <li><a class="dropdown-item" asp-controller="Administradores" asp-action="Dashboard">Panel de Control</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Administradores" asp-action="GestionarUsuario">Gestionar Usuarios</a></li>
+                                            break;
+
+                                        case "Vendedor":
+                                            <li><a class="dropdown-item" asp-controller="Vendedores" asp-action="CrearPublicaciones">Mis publicaciones</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Mensajes" asp-action="EnviarMensajes">Mis Mensajes</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Facturas" asp-action="EmitirFacturas">Facturas</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Ventas" asp-action="Index">Mis Ventas</a></li>
+                                            <li><a class="dropdown-item" asp-controller="PublicacionesPremiums" asp-action="Suscripciones">Suscripciones</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Chats" asp-action="InicializarChats">Chat</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Ofertas" asp-action="MisOfertas">Mis Ofertas</a></li>
+                                            break;
+
+                                        case "Comprador":
+                                            <li><a class="dropdown-item" asp-controller="Ofertas" asp-action="RealizarOferta">Realizar una Oferta</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Ofertas" asp-action="CancelarOferta">Cancelar una Oferta</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Favoritoes" asp-action="VerFavoritoes">Mis Favoritos</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Transacciones" asp-action="ConfirmarPago">Transaccion</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Chats" asp-action="InicializarChats">Chat</a></li>
+                                            break;
+                                    }
+
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li>
+                                        <form asp-controller="UserLogins" asp-action="Logout" method="post" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="dropdown-item text-danger">Cerrar Sesión</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        @RenderBody()
+    </main>
+
+    <footer class="navbar navbar-dark bg-dark mt-4">
+        <div class="container-fluid">
+
+            <!-- Botón responsive -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#footerNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="footerNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Contacto -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="footerContacto" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Contacto
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="footerContacto">
+                            <li><span class="dropdown-item"><i class="bi bi-envelope me-2"></i> soporte@zonaauto.com</span></li>
+                            <li><span class="dropdown-item"><i class="bi bi-telephone me-2"></i> +54 34100000000</span></li>
+                            <li><span class="dropdown-item"><i class="bi bi-geo-alt me-2"></i> Rosario, Santa Fe</span></li>
+                        </ul>
+                    </li>
+
+                    <!-- Redes Sociales -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="footerRedes" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Síguenos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="footerRedes">
+                            <li><a href="#" class="dropdown-item"><i class="bi bi-facebook me-2"></i> Facebook</a></li>
+                            <li><a href="#" class="dropdown-item"><i class="bi bi-instagram me-2"></i> Instagram</a></li>
+                            <li><a href="#" class="dropdown-item"><i class="bi bi-twitter me-2"></i> Twitter</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Enlaces Legales -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="footerEnlaces" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Enlaces
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="footerEnlaces">
+                            <li><a href="#" class="dropdown-item">Términos y Condiciones</a></li>
+                            <li><a href="#" class="dropdown-item">Política de Privacidad</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Créditos -->
+                <div class="text-light small text-center mt-3">
+                    <p class="mb-1">ZONAUTO - Compra y venta de autos, tu plataforma de confianza.</p>
+                    <span>&copy; 2025 - <strong>Desarrollado por Donley Etgard Merlien</strong></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="~/js/site.js" asp-append-version="true" defer></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

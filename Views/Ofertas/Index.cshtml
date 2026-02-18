@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ZONAUTO.Models.Oferta>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Monto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaOferta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comprador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Publicacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaOferta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comprador.CompradorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publicacion.PublicacionId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.OfertaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.OfertaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.OfertaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

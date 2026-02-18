@@ -1,0 +1,83 @@
+﻿@model ZONAUTO.Models.Publicacione
+
+@{
+    ViewData["Title"] = "Editar Publicación";
+}
+
+<h2 class="mb-4 text-primary fw-bold">
+    <i class="bi bi-pencil-square me-2"></i> Editar Publicación
+</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            <input type="hidden" asp-for="PublicacionId" />
+
+            <!-- Auto / Propiedad -->
+            <div class="mb-3">
+                <label asp-for="AutoId" class="form-label">Auto</label>
+                <select asp-for="AutoId" class="form-select" asp-items="ViewBag.AutoId">
+                    <option value="">-- Seleccione un auto --</option>
+                </select>
+                <span asp-validation-for="AutoId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="PropiedadId" class="form-label">Propiedad</label>
+                <select asp-for="PropiedadId" class="form-select" asp-items="ViewBag.PropiedadId">
+                    <option value="">-- Seleccione una propiedad --</option>
+                </select>
+                <span asp-validation-for="PropiedadId" class="text-danger"></span>
+            </div>
+
+            <!-- Título y descripción -->
+            <div class="mb-3">
+                <label asp-for="Titulo" class="form-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Descripcion" class="form-label"></label>
+                <textarea asp-for="Descripcion" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+
+            <!-- Precio y Fecha -->
+            <div class="mb-3">
+                <label asp-for="Precio" class="form-label"></label>
+                <input asp-for="Precio" class="form-control" />
+                <span asp-validation-for="Precio" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="FechaPublicacion" class="form-label"></label>
+                <input asp-for="FechaPublicacion" class="form-control" type="datetime-local" />
+                <span asp-validation-for="FechaPublicacion" class="text-danger"></span>
+            </div>
+
+            <!-- Categoría -->
+            <div class="mb-3">
+                <label asp-for="CategoriaId" class="form-label"></label>
+                <select asp-for="CategoriaId" class="form-select" asp-items="ViewBag.CategoriaId">
+                    <option value="">-- Seleccione categoría --</option>
+                </select>
+                <span asp-validation-for="CategoriaId" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-save me-1"></i> Guardar Cambios
+            </button>
+            <a asp-action="Index" class="btn btn-secondary ms-2">
+                <i class="bi bi-arrow-left me-1"></i> Volver
+            </a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
